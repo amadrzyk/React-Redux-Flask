@@ -52,6 +52,7 @@ $ npm install
 ```sh
 $ python manage.py runserver
 ```
+make sure you do `virtualenv venv && source venv/bin/activate` & try installing flask_script again if you get the "flask_script not found" error
 
 ### Test Back-End
 
@@ -112,6 +113,12 @@ $ sudo pip install mysql-connector-python-rf
 $ export DATABASE_URL="mysql+mysqlconnector://username:password@localhost/mydatabase"
 $ python manage.py create_db
 ```
+ImportError: No module named mysql
+do: `export PATH=$PATH:/usr/local/mysql/bin`
+` pip install mysql`
+https://stackoverflow.com/a/42124222
+
+
 
 Note: you do not need to run "python manage.py db upgrade" or "python manage.py db migrate" if its your first go at it
 
